@@ -1,0 +1,858 @@
+In archive /home/ubuntu/projects/esp32/workplace/esp32_irext/build/irext/libirext.a:
+
+ir_decode.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.ir_ac_binary_open 00000004  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.ir_ac_file_open 0000003c  00000000  00000000  00000038  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.ir_tv_binary_open 00000004  00000000  00000000  00000074  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.ir_tv_file_open 0000003c  00000000  00000000  00000078  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.ir_tv_binary_parse 00000004  00000000  00000000  000000b4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.ir_tv_control 00000008  00000000  00000000  000000b8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .literal.ir_ac_control 00000054  00000000  00000000  000000c0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.ir_ac_binary_close 00000004  00000000  00000000  00000114  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.ir_file_open 00000018  00000000  00000000  00000118  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .literal.ir_binary_open 00000018  00000000  00000000  00000130  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .literal.ir_decode 0000000c  00000000  00000000  00000148  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .literal.ir_close 0000000c  00000000  00000000  00000154  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .literal.get_temperature_range 00000008  00000000  00000000  00000160  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .literal.get_supported_mode 00000004  00000000  00000000  00000168  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .literal.get_supported_wind_speed 00000008  00000000  00000000  0000016c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .literal.get_supported_swing 00000004  00000000  00000000  00000174  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .literal.get_supported_wind_direction 00000004  00000000  00000000  00000178  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .text         00000000  00000000  00000000  0000017c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .data         00000000  00000000  00000000  0000017c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .bss          00000000  00000000  00000000  0000017c  2**0
+                  ALLOC
+ 20 .text.ir_ac_binary_open 00000018  00000000  00000000  0000017c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .text.ir_tv_binary_close 00000007  00000000  00000000  00000194  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .rodata.str1.4 00000003  00000000  00000000  0000019c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 23 .text.ir_ac_file_open 000000c9  00000000  00000000  000001a0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 24 .text.ir_tv_binary_open 00000012  00000000  00000000  0000026c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 25 .text.ir_tv_file_open 000000c8  00000000  00000000  00000280  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 26 .text.ir_tv_binary_parse 00000019  00000000  00000000  00000348  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 27 .text.ir_tv_control 0000001e  00000000  00000000  00000364  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 28 .text.ir_ac_control 000001a6  00000000  00000000  00000384  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 29 .text.ir_ac_binary_close 0000000d  00000000  00000000  0000052c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 30 .text.noprint 00000005  00000000  00000000  0000053c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.ir_file_open 0000007d  00000000  00000000  00000544  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 32 .text.ir_binary_open 00000081  00000000  00000000  000005c4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 33 .text.ir_decode 0000003e  00000000  00000000  00000648  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 34 .text.ir_close 00000023  00000000  00000000  00000688  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 35 .text.get_temperature_range 000000ed  00000000  00000000  000006ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 36 .text.get_supported_mode 00000079  00000000  00000000  0000079c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 37 .text.get_supported_wind_speed 000000c9  00000000  00000000  00000818  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 38 .text.get_supported_swing 0000004d  00000000  00000000  000008e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 39 .text.get_supported_wind_direction 0000001e  00000000  00000000  00000934  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 40 .data.apply_table 0000001c  00000000  00000000  00000954  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 41 .data.context 00000004  00000000  00000000  00000970  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 42 .bss.ir_hexadecimal 00000001  00000000  00000000  00000974  2**0
+                  ALLOC
+ 43 .bss.ir_binary_type 00000001  00000000  00000000  00000974  2**0
+                  ALLOC
+ 44 .bss.binary_content 00000004  00000000  00000000  00000974  2**2
+                  ALLOC
+ 45 .bss.binary_length 00000004  00000000  00000000  00000974  2**2
+                  ALLOC
+ 46 .bss.byteArray 00000498  00000000  00000000  00000974  2**2
+                  ALLOC
+ 47 .bss.ir_hex_len 00000001  00000000  00000000  00000974  2**0
+                  ALLOC
+ 48 .bss.ir_hex_code 00000004  00000000  00000000  00000974  2**2
+                  ALLOC
+ 49 .data.p_ir_buffer 00000004  00000000  00000000  00000974  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 50 .debug_frame  000001d8  00000000  00000000  00000978  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 51 .debug_info   00001e60  00000000  00000000  00000b50  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 52 .debug_abbrev 00000371  00000000  00000000  000029b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 53 .debug_loc    0000055f  00000000  00000000  00002d21  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 54 .debug_aranges 000000b0  00000000  00000000  00003280  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 55 .debug_ranges 000000a0  00000000  00000000  00003330  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 56 .debug_line   00000912  00000000  00000000  000033d0  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 57 .debug_str    000011ae  00000000  00000000  00003ce2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 58 .comment      0000003b  00000000  00000000  00004e90  2**0
+                  CONTENTS, READONLY
+ 59 .xtensa.info  00000038  00000000  00000000  00004ecb  2**0
+                  CONTENTS, READONLY
+ 60 .xt.lit       00000088  00000000  00000000  00004f03  2**0
+                  CONTENTS, RELOC, READONLY
+ 61 .xt.prop      000008dc  00000000  00000000  00004f8b  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_parse_frame_info.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.parse_boot_code 0000000c  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.parse_zero 00000014  00000000  00000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.parse_one 00000014  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.parse_delay_code_data 00000010  00000000  00000000  00000068  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.parse_delay_code_pos 00000020  00000000  00000000  00000078  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.parse_delay_code 0000001c  00000000  00000000  00000098  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .literal.parse_frame_len 00000018  00000000  00000000  000000b4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.parse_endian 0000000c  00000000  00000000  000000cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.parse_lastbit 0000000c  00000000  00000000  000000d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .literal.parse_repeat_times 0000000c  00000000  00000000  000000e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .literal.parse_delay_code_tag48_pos 00000020  00000000  00000000  000000f0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .literal.parse_bit_num 00000020  00000000  00000000  00000110  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text         00000000  00000000  00000000  00000130  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .data         00000000  00000000  00000000  00000130  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 14 .bss          00000000  00000000  00000000  00000130  2**0
+                  ALLOC
+ 15 .text.parse_boot_code 00000092  00000000  00000000  00000130  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .text.parse_zero 00000082  00000000  00000000  000001c4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .text.parse_one 00000081  00000000  00000000  00000248  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 18 .text.parse_delay_code_data 000000b5  00000000  00000000  000002cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 19 .text.parse_delay_code_pos 000000a9  00000000  00000000  00000384  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 20 .text.parse_delay_code 00000085  00000000  00000000  00000430  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .text.parse_frame_len 00000062  00000000  00000000  000004b8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 22 .text.parse_endian 00000035  00000000  00000000  0000051c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 23 .text.parse_lastbit 00000039  00000000  00000000  00000554  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 24 .text.parse_repeat_times 00000039  00000000  00000000  00000590  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 25 .text.parse_delay_code_tag48_pos 000000ba  00000000  00000000  000005cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 26 .text.parse_bit_num 000000bd  00000000  00000000  00000688  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 27 .debug_frame  00000130  00000000  00000000  00000748  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 28 .debug_info   00001244  00000000  00000000  00000878  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 29 .debug_abbrev 0000022e  00000000  00000000  00001abc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_loc    00000924  00000000  00000000  00001cea  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 31 .debug_aranges 00000078  00000000  00000000  0000260e  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 32 .debug_ranges 00000068  00000000  00000000  00002686  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 33 .debug_line   00000653  00000000  00000000  000026ee  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 34 .debug_str    00000781  00000000  00000000  00002d41  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 35 .comment      0000003b  00000000  00000000  000034c2  2**0
+                  CONTENTS, READONLY
+ 36 .xtensa.info  00000038  00000000  00000000  000034fd  2**0
+                  CONTENTS, READONLY
+ 37 .xt.lit       00000060  00000000  00000000  00003535  2**0
+                  CONTENTS, RELOC, READONLY
+ 38 .xt.prop      00000534  00000000  00000000  00003595  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_control.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.ir_context_init 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.ir_ac_lib_parse 000000c8  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.free_ac_context 00000050  00000000  00000000  00000104  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.is_solo_function 00000004  00000000  00000000  00000154  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .text         00000000  00000000  00000000  00000158  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .data         00000000  00000000  00000000  00000158  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .bss          00000000  00000000  00000000  00000158  2**0
+                  ALLOC
+  7 .text.ir_context_init 00000018  00000000  00000000  00000158  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .rodata.str1.4 0000001c  00000000  00000000  00000170  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .text.ir_ac_lib_parse 0000084e  00000000  00000000  0000018c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.free_ac_context 00000306  00000000  00000000  000009dc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text.is_solo_function 0000001e  00000000  00000000  00000ce4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .debug_frame  00000070  00000000  00000000  00000d04  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 13 .debug_info   00001023  00000000  00000000  00000d74  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .debug_abbrev 0000022e  00000000  00000000  00001d97  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_loc    00000245  00000000  00000000  00001fc5  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_aranges 00000038  00000000  00000000  0000220a  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 17 .debug_ranges 00000040  00000000  00000000  00002242  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_line   0000083b  00000000  00000000  00002282  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 19 .debug_str    00000abb  00000000  00000000  00002abd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 20 .comment      0000003b  00000000  00000000  00003578  2**0
+                  CONTENTS, READONLY
+ 21 .xtensa.info  00000038  00000000  00000000  000035b3  2**0
+                  CONTENTS, READONLY
+ 22 .xt.lit       00000020  00000000  00000000  000035eb  2**0
+                  CONTENTS, RELOC, READONLY
+ 23 .xt.prop      000005d0  00000000  00000000  0000360b  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_apply.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.apply_ac_power 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.apply_ac_parameter_type_2 00000004  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .literal.apply_ac_mode 0000000c  00000000  00000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.apply_ac_wind_speed 0000000c  00000000  00000000  0000004c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.apply_ac_swing 0000000c  00000000  00000000  00000058  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.apply_ac_temperature 00000014  00000000  00000000  00000064  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .literal.apply_function 0000000c  00000000  00000000  00000078  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.apply_checksum 00000028  00000000  00000000  00000084  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.apply_power 00000008  00000000  00000000  000000ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .literal.apply_mode 00000008  00000000  00000000  000000b4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .literal.apply_wind_speed 0000000c  00000000  00000000  000000bc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .literal.apply_swing 00000010  00000000  00000000  000000c8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .literal.apply_temperature 0000000c  00000000  00000000  000000d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text         00000000  00000000  00000000  000000e4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .data         00000000  00000000  00000000  000000e4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 15 .bss          00000000  00000000  00000000  000000e4  2**0
+                  ALLOC
+ 16 .text.apply_checksum_byte 00000049  00000000  00000000  000000e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .text.apply_checksum_halfbyte 00000051  00000000  00000000  00000130  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 18 .text.apply_checksum_spec_byte 00000095  00000000  00000000  00000184  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 19 .text.apply_checksum_spec_byte_onebyte 00000070  00000000  00000000  0000021c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 20 .text.has_function 00000039  00000000  00000000  0000028c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .text.apply_ac_parameter_type_1 00000042  00000000  00000000  000002c8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 22 .text.apply_ac_power 0000004a  00000000  00000000  0000030c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 23 .text.apply_ac_parameter_type_2 0000018a  00000000  00000000  00000358  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 24 .text.apply_ac_mode 000000a6  00000000  00000000  000004e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 25 .text.apply_ac_wind_speed 000000a5  00000000  00000000  0000058c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 26 .text.apply_ac_swing 000000ba  00000000  00000000  00000634  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 27 .text.apply_ac_temperature 000000fa  00000000  00000000  000006f0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 28 .text.apply_function 00000095  00000000  00000000  000007ec  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 29 .text.apply_checksum 00000102  00000000  00000000  00000884  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 30 .rodata.apply_checksum 00000024  00000000  00000000  00000988  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 31 .text.apply_power 00000015  00000000  00000000  000009ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 32 .text.apply_mode 0000001e  00000000  00000000  000009c4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 33 .text.apply_wind_speed 00000090  00000000  00000000  000009e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 34 .text.apply_swing 000000b6  00000000  00000000  00000a74  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 35 .text.apply_temperature 000000a2  00000000  00000000  00000b2c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 36 .debug_frame  000001d8  00000000  00000000  00000bd0  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 37 .debug_info   000015cf  00000000  00000000  00000da8  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 38 .debug_abbrev 0000027b  00000000  00000000  00002377  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 39 .debug_loc    000016d5  00000000  00000000  000025f2  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 40 .debug_aranges 000000b0  00000000  00000000  00003cc7  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 41 .debug_ranges 000000b8  00000000  00000000  00003d77  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 42 .debug_line   0000095e  00000000  00000000  00003e2f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 43 .debug_str    00000d8d  00000000  00000000  0000478d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 44 .comment      0000003b  00000000  00000000  0000551a  2**0
+                  CONTENTS, READONLY
+ 45 .xtensa.info  00000038  00000000  00000000  00005555  2**0
+                  CONTENTS, READONLY
+ 46 .xt.lit       00000068  00000000  00000000  0000558d  2**0
+                  CONTENTS, RELOC, READONLY
+ 47 .xt.prop      00000b70  00000000  00000000  000055f5  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_binary_parse.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.binary_parse_offset 00000018  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.binary_parse_len 00000014  00000000  00000000  0000004c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.binary_parse_data 00000010  00000000  00000000  00000060  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .text         00000000  00000000  00000000  00000070  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .data         00000000  00000000  00000000  00000070  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .bss          00000000  00000000  00000000  00000070  2**0
+                  ALLOC
+  6 .text.binary_parse_offset 0000006d  00000000  00000000  00000070  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .text.binary_parse_len 000000dc  00000000  00000000  000000e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .text.binary_tags_info 00000005  00000000  00000000  000001bc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  9 .text.binary_parse_data 00000041  00000000  00000000  000001c4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .rodata.tag_index 0000003a  00000000  00000000  00000208  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 11 .bss.tag_count 00000001  00000000  00000000  00000242  2**0
+                  ALLOC
+ 12 .bss.tag_head_offset 00000002  00000000  00000000  00000242  2**1
+                  ALLOC
+ 13 .debug_frame  00000070  00000000  00000000  00000244  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .debug_info   00000386  00000000  00000000  000002b4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_abbrev 00000122  00000000  00000000  0000063a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_loc    000000db  00000000  00000000  0000075c  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 17 .debug_aranges 00000038  00000000  00000000  00000837  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_ranges 00000028  00000000  00000000  0000086f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 19 .debug_line   0000020c  00000000  00000000  00000897  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 20 .debug_str    0000047f  00000000  00000000  00000aa3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 21 .comment      0000003b  00000000  00000000  00000f22  2**0
+                  CONTENTS, READONLY
+ 22 .xtensa.info  00000038  00000000  00000000  00000f5d  2**0
+                  CONTENTS, READONLY
+ 23 .xt.lit       00000018  00000000  00000000  00000f95  2**0
+                  CONTENTS, RELOC, READONLY
+ 24 .xt.prop      00000198  00000000  00000000  00000fad  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_parse_parameter.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.parse_comp_data_type_1 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.parse_comp_data_type_2 00000008  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.parse_common_ac_parameter 0000001c  00000000  00000000  00000044  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.parse_default_code 00000004  00000000  00000000  00000060  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.parse_power_1 00000014  00000000  00000000  00000064  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.parse_temp_1 0000001c  00000000  00000000  00000078  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .literal.parse_mode_1 00000014  00000000  00000000  00000094  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.parse_speed_1 00000014  00000000  00000000  000000a8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.parse_swing_1 0000001c  00000000  00000000  000000bc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .literal.parse_checksum_spec_half_byte_typed 00000008  00000000  00000000  000000d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .literal.parse_checksum_malloc 00000008  00000000  00000000  000000e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .literal.parse_checksum_data 00000030  00000000  00000000  000000e8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .literal.parse_checksum 0000000c  00000000  00000000  00000118  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .literal.parse_function_1 00000014  00000000  00000000  00000124  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .literal.parse_function_1_tag29 00000010  00000000  00000000  00000138  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .literal.parse_temp_2 0000001c  00000000  00000000  00000148  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .literal.parse_mode_2 00000014  00000000  00000000  00000164  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .literal.parse_speed_2 00000014  00000000  00000000  00000178  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 18 .literal.parse_swing_2 0000001c  00000000  00000000  0000018c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 19 .literal.parse_function_2 00000014  00000000  00000000  000001a8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 20 .literal.parse_function_2_tag34 00000010  00000000  00000000  000001bc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .literal.parse_solo_code 00000014  00000000  00000000  000001cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 22 .text         00000000  00000000  00000000  000001e0  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .data         00000000  00000000  00000000  000001e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .bss          00000000  00000000  00000000  000001e0  2**0
+                  ALLOC
+ 25 .text.parse_comp_data_type_1 0000004a  00000000  00000000  000001e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 26 .text.parse_comp_data_type_2 0000004a  00000000  00000000  0000022c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 27 .text.parse_common_ac_parameter 000000c5  00000000  00000000  00000278  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 28 .text.parse_default_code 00000019  00000000  00000000  00000340  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 29 .text.parse_power_1 00000083  00000000  00000000  0000035c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 30 .text.parse_temp_1 000000fe  00000000  00000000  000003e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 31 .text.parse_mode_1 0000007e  00000000  00000000  000004e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 32 .text.parse_speed_1 0000007e  00000000  00000000  00000560  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 33 .text.parse_swing_1 0000009a  00000000  00000000  000005e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 34 .text.parse_checksum_byte_typed 0000002f  00000000  00000000  0000067c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 35 .text.parse_checksum_half_byte_typed 0000002f  00000000  00000000  000006ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 36 .text.parse_checksum_spec_half_byte_typed 00000041  00000000  00000000  000006dc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 37 .text.parse_checksum_malloc 0000005d  00000000  00000000  00000720  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 38 .text.parse_checksum_data 000000e2  00000000  00000000  00000780  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 39 .rodata.parse_checksum_data 00000024  00000000  00000000  00000864  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 40 .text.parse_checksum 000000b0  00000000  00000000  00000888  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 41 .rodata.str1.4 00000040  00000000  00000000  00000938  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 42 .text.parse_function_1 000000b5  00000000  00000000  00000978  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 43 .text.parse_function_1_tag29 0000006d  00000000  00000000  00000a30  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 44 .text.parse_temp_2 00000119  00000000  00000000  00000aa0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 45 .text.parse_mode_2 00000082  00000000  00000000  00000bbc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 46 .text.parse_speed_2 00000085  00000000  00000000  00000c40  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 47 .text.parse_swing_2 000000a5  00000000  00000000  00000cc8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 48 .text.parse_function_2 000000b6  00000000  00000000  00000d70  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 49 .text.parse_function_2_tag34 0000006d  00000000  00000000  00000e28  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 50 .text.parse_swing_info 0000005a  00000000  00000000  00000e98  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 51 .text.parse_solo_code 0000007e  00000000  00000000  00000ef4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 52 .debug_frame  00000268  00000000  00000000  00000f74  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 53 .debug_info   00001b5b  00000000  00000000  000011dc  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 54 .debug_abbrev 00000240  00000000  00000000  00002d37  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 55 .debug_loc    00001a01  00000000  00000000  00002f77  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 56 .debug_aranges 000000e0  00000000  00000000  00004978  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 57 .debug_ranges 000000d0  00000000  00000000  00004a58  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 58 .debug_line   00000ff0  00000000  00000000  00004b28  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 59 .debug_str    00000ad5  00000000  00000000  00005b18  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 60 .comment      0000003b  00000000  00000000  000065ed  2**0
+                  CONTENTS, READONLY
+ 61 .xtensa.info  00000038  00000000  00000000  00006628  2**0
+                  CONTENTS, READONLY
+ 62 .xt.lit       000000b0  00000000  00000000  00006660  2**0
+                  CONTENTS, RELOC, READONLY
+ 63 .xt.prop      00001044  00000000  00000000  00006710  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_test_main.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.decode_as_ac 00000078  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.decode_as_tv 0000002c  00000000  00000000  000000ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.main 00000030  00000000  00000000  000000d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .text         00000000  00000000  00000000  00000108  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .data         00000000  00000000  00000000  00000108  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .bss          00000000  00000000  00000000  00000108  2**0
+                  ALLOC
+  6 .rodata.str1.4 0000018a  00000000  00000000  00000108  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .text.decode_as_ac 0000027a  00000000  00000000  00000294  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .rodata.decode_as_ac 0000011c  00000000  00000000  00000510  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  9 .text.decode_as_tv 000000b4  00000000  00000000  0000062c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.main    00000079  00000000  00000000  000006e0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .debug_frame  00000058  00000000  00000000  0000075c  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 12 .debug_info   000007cd  00000000  00000000  000007b4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 13 .debug_abbrev 0000015e  00000000  00000000  00000f81  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    0000022e  00000000  00000000  000010df  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_aranges 00000030  00000000  00000000  0000130d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_ranges 00000020  00000000  00000000  0000133d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 17 .debug_line   00000509  00000000  00000000  0000135d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_str    00000657  00000000  00000000  00001866  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .comment      0000003b  00000000  00000000  00001ebd  2**0
+                  CONTENTS, READONLY
+ 20 .xtensa.info  00000038  00000000  00000000  00001ef8  2**0
+                  CONTENTS, READONLY
+ 21 .xt.lit       00000018  00000000  00000000  00001f30  2**0
+                  CONTENTS, RELOC, READONLY
+ 22 .xt.prop      00000378  00000000  00000000  00001f48  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_build_frame.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.bits_per_byte 00000004  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.add_delaycode 00000008  00000000  00000000  00000038  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.create_ir_frame 00000014  00000000  00000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .text         00000000  00000000  00000000  00000054  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .data         00000000  00000000  00000000  00000054  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .bss          00000000  00000000  00000000  00000054  2**0
+                  ALLOC
+  6 .text.bits_per_byte 00000058  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .text.add_delaycode 0000013f  00000000  00000000  000000ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .text.create_ir_frame 0000017e  00000000  00000000  000001ec  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .debug_frame  00000058  00000000  00000000  0000036c  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 10 .debug_info   00000a12  00000000  00000000  000003c4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 11 .debug_abbrev 000001a7  00000000  00000000  00000dd6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000003e0  00000000  00000000  00000f7d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 13 .debug_aranges 00000030  00000000  00000000  0000135d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .debug_ranges 00000020  00000000  00000000  0000138d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_line   00000325  00000000  00000000  000013ad  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_str    000006c9  00000000  00000000  000016d2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .comment      0000003b  00000000  00000000  00001d9b  2**0
+                  CONTENTS, READONLY
+ 18 .xtensa.info  00000038  00000000  00000000  00001dd6  2**0
+                  CONTENTS, READONLY
+ 19 .xt.lit       00000018  00000000  00000000  00001e0e  2**0
+                  CONTENTS, RELOC, READONLY
+ 20 .xt.prop      0000027c  00000000  00000000  00001e26  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_tv_control.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.get_ir_protocol 00000020  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.replace_with 00000008  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.convert_to_ir_time 00000048  00000000  00000000  0000005c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.process_decode_number 00000008  00000000  00000000  000000a4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.get_ir_keymap 00000014  00000000  00000000  000000ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.print_ir_time 00000054  00000000  00000000  000000c0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .literal.tv_binary_open 00000004  00000000  00000000  00000114  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.tv_binary_parse 00000008  00000000  00000000  00000118  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.tv_binary_decode 0000001c  00000000  00000000  00000120  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .text         00000000  00000000  00000000  0000013c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 10 .data         00000000  00000000  00000000  0000013c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 11 .bss          00000000  00000000  00000000  0000013c  2**0
+                  ALLOC
+ 12 .text.get_ir_protocol 000000f6  00000000  00000000  0000013c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text.replace_with 0000011b  00000000  00000000  00000234  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .text.convert_to_ir_time 00000116  00000000  00000000  00000350  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .rodata.convert_to_ir_time 00000040  00000000  00000000  00000468  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 16 .text.process_decode_number 0000007e  00000000  00000000  000004a8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 17 .rodata.str1.4 00000084  00000000  00000000  00000528  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 18 .text.get_ir_keymap 00000036  00000000  00000000  000005ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 19 .text.print_ir_time 000002c6  00000000  00000000  000005e4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 20 .text.tv_binary_open 00000014  00000000  00000000  000008ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .text.tv_binary_parse 00000018  00000000  00000000  000008c0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 22 .text.tv_binary_decode 00000060  00000000  00000000  000008d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 23 .bss.cycles_num_size 00000001  00000000  00000000  00000938  2**0
+                  ALLOC
+ 24 .bss.ir_decode_flag 00000001  00000000  00000000  00000938  2**0
+                  ALLOC
+ 25 .bss.ir_toggle_bit 00000001  00000000  00000000  00000938  2**0
+                  ALLOC
+ 26 .bss.ir_level 00000001  00000000  00000000  00000938  2**0
+                  ALLOC
+ 27 .bss.time_index 00000002  00000000  00000000  00000938  2**1
+                  ALLOC
+ 28 .bss.remote_pdata 00000004  00000000  00000000  00000938  2**2
+                  ALLOC
+ 29 .bss.remote_p 00000004  00000000  00000000  00000938  2**2
+                  ALLOC
+ 30 .bss.prot_items_data 00000004  00000000  00000000  00000938  2**2
+                  ALLOC
+ 31 .bss.prot_items_cnt 00000001  00000000  00000000  00000938  2**0
+                  ALLOC
+ 32 .bss.prot_cycles_data 00000050  00000000  00000000  00000938  2**2
+                  ALLOC
+ 33 .bss.prot_cycles_num 00000004  00000000  00000000  00000938  2**2
+                  ALLOC
+ 34 .debug_frame  000000e8  00000000  00000000  00000938  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 35 .debug_info   000009e6  00000000  00000000  00000a20  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 36 .debug_abbrev 00000229  00000000  00000000  00001406  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 37 .debug_loc    00000590  00000000  00000000  0000162f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 38 .debug_aranges 00000060  00000000  00000000  00001bbf  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 39 .debug_ranges 00000050  00000000  00000000  00001c1f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 40 .debug_line   000006f4  00000000  00000000  00001c6f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 41 .debug_str    00000758  00000000  00000000  00002363  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 42 .comment      0000003b  00000000  00000000  00002abb  2**0
+                  CONTENTS, READONLY
+ 43 .xtensa.info  00000038  00000000  00000000  00002af6  2**0
+                  CONTENTS, READONLY
+ 44 .xt.lit       00000048  00000000  00000000  00002b2e  2**0
+                  CONTENTS, RELOC, READONLY
+ 45 .xt.prop      00000768  00000000  00000000  00002b76  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_utils.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.chars_to_hex 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.string_to_hex_common 00000004  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.string_to_hex 00000008  00000000  00000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.hex_byte_to_double_char 00000008  00000000  00000000  00000048  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .text         00000000  00000000  00000000  00000050  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .data         00000000  00000000  00000000  00000050  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .bss          00000000  00000000  00000000  00000050  2**0
+                  ALLOC
+  7 .text.char_to_hex 00000035  00000000  00000000  00000050  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .text.chars_to_hex 00000022  00000000  00000000  00000088  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .text.string_to_hex_common 00000027  00000000  00000000  000000ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.string_to_hex 00000036  00000000  00000000  000000d4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text.hex_half_byte_to_single_char 00000041  00000000  00000000  0000010c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text.hex_byte_to_double_char 00000042  00000000  00000000  00000150  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text.is_in   00000029  00000000  00000000  00000194  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .debug_frame  000000b8  00000000  00000000  000001c0  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_info   00000325  00000000  00000000  00000278  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_abbrev 0000014d  00000000  00000000  0000059d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_loc    00000265  00000000  00000000  000006ea  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_aranges 00000050  00000000  00000000  0000094f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 19 .debug_ranges 00000040  00000000  00000000  0000099f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 20 .debug_line   00000251  00000000  00000000  000009df  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 21 .debug_str    00000263  00000000  00000000  00000c30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 22 .comment      0000003b  00000000  00000000  00000e93  2**0
+                  CONTENTS, READONLY
+ 23 .xtensa.info  00000038  00000000  00000000  00000ece  2**0
+                  CONTENTS, READONLY
+ 24 .xt.lit       00000020  00000000  00000000  00000f06  2**0
+                  CONTENTS, RELOC, READONLY
+ 25 .xt.prop      000001ec  00000000  00000000  00000f26  2**0
+                  CONTENTS, RELOC, READONLY
+
+ir_ac_parse_forbidden_info.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.parse_nmode_data_speed 00000010  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.parse_nmode_data_temp 00000010  00000000  00000000  00000044  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.parse_nmode_pos 00000018  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.parse_nmode 00000020  00000000  00000000  0000006c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .text         00000000  00000000  00000000  0000008c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .data         00000000  00000000  00000000  0000008c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .bss          00000000  00000000  00000000  0000008c  2**0
+                  ALLOC
+  7 .text.parse_nmode_data_speed 000000a0  00000000  00000000  0000008c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .text.parse_nmode_data_temp 000000a6  00000000  00000000  0000012c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .text.parse_nmode_pos 000000da  00000000  00000000  000001d4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text.parse_nmode 000000c4  00000000  00000000  000002b0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .debug_frame  00000070  00000000  00000000  00000374  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 12 .debug_info   00000d22  00000000  00000000  000003e4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 13 .debug_abbrev 000001e5  00000000  00000000  00001106  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00000445  00000000  00000000  000012eb  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_aranges 00000038  00000000  00000000  00001730  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_ranges 00000028  00000000  00000000  00001768  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 17 .debug_line   0000031d  00000000  00000000  00001790  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 18 .debug_str    0000071c  00000000  00000000  00001aad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .comment      0000003b  00000000  00000000  000021c9  2**0
+                  CONTENTS, READONLY
+ 20 .xtensa.info  00000038  00000000  00000000  00002204  2**0
+                  CONTENTS, READONLY
+ 21 .xt.lit       00000020  00000000  00000000  0000223c  2**0
+                  CONTENTS, RELOC, READONLY
+ 22 .xt.prop      000001f8  00000000  00000000  0000225c  2**0
+                  CONTENTS, RELOC, READONLY
