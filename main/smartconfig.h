@@ -17,8 +17,9 @@
 #include "tcpip_adapter.h"
 
 #include "mywifi.h"
+#include "my_led.h"
 
-void smartconfig_example_task(void * parm);
+void my_smartconfig_start();
 
 extern TaskHandle_t smartConfigTask;
 

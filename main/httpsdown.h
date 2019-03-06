@@ -16,14 +16,24 @@
 #include "esp_tls.h"
 #include "esp_log.h"
 #include "esp_err.h"
-#include "esp_spiffs.h"
+
 
 #include "cJSON.h"
 #include "ir_decode.h"
 #include "IRsend.h"
 #include "smartconfig.h"
+#include "myspiffs.h"
 
-void Initializing_SPIFFS(void);
-void https_get_task(void *pvParameters);
+/* Constants that aren't configurable in menuconfig */
+#define WEB_SERVER "www.irext.net"
+#define WEB_PORT "443"
+#define WEB_URL "https://irext.net/irext-server/operation/download_bin"
+
+#define CONTENTTYPE "application/json"
+
+void https_post_task(void *pvParameters);
+
+extern TaskHandle_t httpDownTask;
+extern t_remote_ac_status ac_status;
 
 #endif /* MAIN_HTTPSDOWN_H_ */

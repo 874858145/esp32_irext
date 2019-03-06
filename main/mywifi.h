@@ -18,12 +18,14 @@
 
 #include "smartconfig.h"
 #include "udpsocket.h"
+#include "myspiffs.h"
 
-void initialise_wifi(void);
+void setSSidAndPassword(char *ssidAndPassword);
+void initialise_wifi();
 
-extern const int IPV4_GOTIP_BIT;
-extern const int IPV6_GOTIP_BIT;
-extern const int ESPTOUCH_DONE_BIT;
+extern const int CONNECTED_BIT;
+
+extern char myIpAddress[20];
 
 extern EventGroupHandle_t my_irext_event_group;
 

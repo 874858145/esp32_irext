@@ -12,6 +12,8 @@ TaskHandle_t smartConfigTask;
 
 static void sc_callback(smartconfig_status_t status, void *pdata)
 {
+	char ssidAndPassword[64];
+
     switch (status) {
         case SC_STATUS_WAIT:
             ESP_LOGI(TAG, "SC_STATUS_WAIT");
@@ -27,6 +29,13 @@ static void sc_callback(smartconfig_status_t status, void *pdata)
             wifi_config_t *wifi_config = pdata;
             ESP_LOGI(TAG, "SSID:%s", wifi_config->sta.ssid);
             ESP_LOGI(TAG, "PASSWORD:%s", wifi_config->sta.password);
+
+            memset(ssidAndPassword,0,64);    //保存ssid和密码
+            strcpy (ssidAndPassword,(char *)wifi_config->sta.ssid);
+            strcat(ssidAndPassword,",");
+            strcat(ssidAndPassword,(char *)wifi_config->sta.password);
+            setSSidAndPassword(ssidAndPassword);
+
             ESP_ERROR_CHECK( esp_wifi_disconnect() );
             ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, wifi_config) );
             ESP_ERROR_CHECK( esp_wifi_connect() );
@@ -38,26 +47,17 @@ static void sc_callback(smartconfig_status_t status, void *pdata)
                 memcpy(phone_ip, (uint8_t* )pdata, 4);
                 ESP_LOGI(TAG, "Phone ip: %d.%d.%d.%d\n", phone_ip[0], phone_ip[1], phone_ip[2], phone_ip[3]);
             }
-            xEventGroupSetBits(my_irext_event_group, ESPTOUCH_DONE_BIT);
+            xEventGroupClearBits(my_irext_event_group, LEDCONTROL_BIT);
             esp_smartconfig_stop();
             ESP_LOGI(TAG, "smartconfig over");
-            if( smartConfigTask !=NULL )
-			{
-				vTaskDelete(smartConfigTask);
-			}
             break;
         default:
             break;
     }
 }
 
-void smartconfig_example_task(void * parm)
+void my_smartconfig_start()
 {
-    EventBits_t uxBits;
     ESP_ERROR_CHECK( esp_smartconfig_set_type(SC_TYPE_ESPTOUCH) );
     ESP_ERROR_CHECK( esp_smartconfig_start(sc_callback) );
-    while (1) {
-        xEventGroupWaitBits(my_irext_event_group,ESPTOUCH_DONE_BIT, true, false, portMAX_DELAY);
-        vTaskDelay(10);
-    }
 }

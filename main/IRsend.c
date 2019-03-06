@@ -1,5 +1,3 @@
-#include "esp_log.h"
-#include "driver/rmt.h"
 #include "IRsend.h"
 
 static const char* NEC_TAG = "NEC";

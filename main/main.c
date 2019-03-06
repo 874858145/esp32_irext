@@ -41,23 +41,28 @@
 #include "httpsdown.h"
 #include "mywifi.h"
 #include "udpsocket.h"
-
-/* FreeRTOS event group to signal when we are connected & ready to make a request */
-
-TaskHandle_t httpDownTask;
-
+#include "my_timer.h"
+#include "my_led.h"
+#include "myspiffs.h"
 /* The event group allows multiple bits for each event,
    but we only care about one event - are we connected
    to the AP with an IP? */
-static const char *TAG = "esp32irext";
+//static const char *TAG = "esp32irext";
 
 void app_main()
 {
     ESP_ERROR_CHECK( nvs_flash_init() );
+    Initializing_SPIFFS();   //需要在menuconfig里面设置
+    setTurnOnOffFlag(false);
+    my_irext_event_group = xEventGroupCreate();
+    my_tg0_timer_init(TIMER_0, TEST_WITH_RELOAD, TIMER_INTERVAL0_SEC);
+    my_tg0_timer_start(TIMER_0);
     initialise_wifi();
-//    Initializing_SPIFFS();   //需要在menuconfig里面设置
-//    rmt_tx_int();
+    rmt_tx_int();
 
-//    xTaskCreate(&https_get_task, "https_get_task", 8192, NULL, 5, &httpDownTask);
-    xTaskCreate(udp_server_task, "udp_server", 4096, NULL, 5, NULL);
+	xTaskCreate(&my_timer_task, "my_timer_task", 2048, NULL, 5, &myTimerTask);
+    xTaskCreate(&my_led_task, "my_led_task", 4096, NULL, 5, &ledControlTask);
+    xTaskCreate(&https_post_task, "https_post", 8192, NULL, 5, &httpDownTask);
+    xTaskCreate(udp_sendip_task, "udp_sendip", 4096, NULL, 4, &udpSendIpTask);
+    xTaskCreate(udp_receive_task, "udp_server", 4096, NULL, 5, &udpReceiveTask);
 }
