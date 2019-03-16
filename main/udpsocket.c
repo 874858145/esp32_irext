@@ -26,6 +26,7 @@ void setACControlDate(cJSON * root)
 {
 	cJSON *tempJson = NULL;
 	char *tempStr = NULL;
+	unsigned char tempLen=0;
 
 	tempJson = cJSON_GetObjectItem(root, "id");
 	tempStr = cJSON_Print(tempJson);
@@ -33,7 +34,9 @@ void setACControlDate(cJSON * root)
 
 	tempJson = cJSON_GetObjectItem(root, "token");
 	tempStr = cJSON_Print(tempJson);
-	strcpy(my_ac_control.token,tempStr);
+	tempLen = strlen(tempStr);
+	strncpy(my_ac_control.token,tempStr+1,tempLen-2);
+	my_ac_control.token[tempLen-2]='\0';
 
 	tempJson = cJSON_GetObjectItem(root, "indexId");
 	tempStr = cJSON_Print(tempJson);
@@ -78,9 +81,9 @@ void udp_sendip_task(void *pvParameters)   //如果ip为空就发送NULL,否则�
 		wait_for_ip();
 
 		struct sockaddr_in destAddr;
-		destAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+		destAddr.sin_addr.s_addr = inet_addr("255.255.255.255");
 		destAddr.sin_family = AF_INET;
-		destAddr.sin_port = htons(PORT);
+		destAddr.sin_port = htons(9696);
 		addr_family = AF_INET;
 		ip_protocol = IPPROTO_IP;
 		inet_ntoa_r(destAddr.sin_addr, addr_str, sizeof(addr_str) - 1);
@@ -106,7 +109,7 @@ void udp_sendip_task(void *pvParameters)   //如果ip为空就发送NULL,否则�
 				ESP_LOGE(TAG, "Error occured during sending: errno %d", errno);
 				break;
 			}
-			ESP_LOGI(TAG, "Message sent");
+			//ESP_LOGI(TAG,"send:%s,%d" ,jsonStr,err);
 
 			vTaskDelay(2000 / portTICK_PERIOD_MS);
 		}
@@ -134,7 +137,7 @@ void udp_receive_task(void *pvParameters)
         struct sockaddr_in destAddr;
         destAddr.sin_addr.s_addr = htonl(INADDR_ANY);
         destAddr.sin_family = AF_INET;
-        destAddr.sin_port = htons(PORT);
+        destAddr.sin_port = htons(6969);
         addr_family = AF_INET;
         ip_protocol = IPPROTO_IP;
         inet_ntoa_r(destAddr.sin_addr, addr_str, sizeof(addr_str) - 1);

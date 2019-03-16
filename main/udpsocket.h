@@ -23,8 +23,6 @@
 #include "mywifi.h"
 #include "httpsdown.h"
 
-#define PORT 9696
-
 typedef struct
 {
 	char id[5];

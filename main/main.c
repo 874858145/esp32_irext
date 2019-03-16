@@ -53,6 +53,9 @@ void app_main()
 {
     ESP_ERROR_CHECK( nvs_flash_init() );
     Initializing_SPIFFS();   //需要在menuconfig里面设置
+
+//    esp_spiffs_format(NULL);
+
     setTurnOnOffFlag(false);
     my_irext_event_group = xEventGroupCreate();
     my_tg0_timer_init(TIMER_0, TEST_WITH_RELOAD, TIMER_INTERVAL0_SEC);

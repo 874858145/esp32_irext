@@ -12,8 +12,6 @@ TaskHandle_t smartConfigTask;
 
 static void sc_callback(smartconfig_status_t status, void *pdata)
 {
-	char ssidAndPassword[64];
-
     switch (status) {
         case SC_STATUS_WAIT:
             ESP_LOGI(TAG, "SC_STATUS_WAIT");
@@ -29,12 +27,6 @@ static void sc_callback(smartconfig_status_t status, void *pdata)
             wifi_config_t *wifi_config = pdata;
             ESP_LOGI(TAG, "SSID:%s", wifi_config->sta.ssid);
             ESP_LOGI(TAG, "PASSWORD:%s", wifi_config->sta.password);
-
-            memset(ssidAndPassword,0,64);    //保存ssid和密码
-            strcpy (ssidAndPassword,(char *)wifi_config->sta.ssid);
-            strcat(ssidAndPassword,",");
-            strcat(ssidAndPassword,(char *)wifi_config->sta.password);
-            setSSidAndPassword(ssidAndPassword);
 
             ESP_ERROR_CHECK( esp_wifi_disconnect() );
             ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, wifi_config) );

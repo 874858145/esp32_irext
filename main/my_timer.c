@@ -172,6 +172,7 @@ void my_timer_task(void *arg)
 			}
     	}
     	if (statusFlag > 3) {
+    		esp_wifi_connect();
 			setTurnOnOffFlag(true);
 			my_tg0_timer_stop(TIMER_0);  //暂停定时器
 			vTaskDelete(myTimerTask);

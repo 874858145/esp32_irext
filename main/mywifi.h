@@ -20,7 +20,6 @@
 #include "udpsocket.h"
 #include "myspiffs.h"
 
-void setSSidAndPassword(char *ssidAndPassword);
 void initialise_wifi();
 
 extern const int CONNECTED_BIT;

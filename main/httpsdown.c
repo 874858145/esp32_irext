@@ -74,8 +74,8 @@ void https_post_task(void *pvParameters)
 
     struct esp_tls *tls = NULL;
 
-    char *pathName = "/irext/";
-    char *filePath=0;
+    char pathName[10] = "/irext/";
+    char filePath[20];
 
     cJSON *jsonroot=0;
     char *writeJson=0;
@@ -145,8 +145,6 @@ void https_post_task(void *pvParameters)
 
 			ESP_LOGI(TAG, "Reading HTTP response...");
 
-			f = fopen(filePath, "w");
-
 			do
 			{
 				const int bufsize = 1024*2;
@@ -170,21 +168,32 @@ void https_post_task(void *pvParameters)
 
 				if(ret > 0)
 				{
-					char inputFile[1024];
-					char *tempBuf = strstr(buf, "\r\n\r\n")+4;
-					char cbinLen[10];
-					memcpy(cbinLen, tempBuf, 3);
-					cbinLen[3]='\0';
-					int binLen = hextoint(cbinLen);
-					memcpy(inputFile, buf+ret-(binLen+7), binLen);
-					for(int i = 0; i < ret; i++) {
-						putchar(buf[i]);
+					if(strstr(buf,"HTTP/1.1 200 OK")!=NULL)
+					{
+						f = fopen(filePath, "w");
+						ESP_LOGI(TAG, "https get index!!");
+						char inputFile[1024];
+						char *tempBuf = strstr(buf, "\r\n\r\n")+4;
+						char cbinLen[10];
+						memcpy(cbinLen, tempBuf, 3);
+						cbinLen[3]='\0';
+						int binLen = hextoint(cbinLen);
+						memcpy(inputFile, buf+ret-(binLen+7), binLen);
+						for(int i = 0; i < ret; i++) {
+							putchar(buf[i]);
+						}
+						fwrite(inputFile,binLen,1,f);
+						free(buf);
+						fclose(f);
 					}
-
-					fwrite(inputFile,binLen,1,f);
+					else
+					{
+						free(buf);
+						ESP_LOGI(TAG, "http error!!");
+						goto myerror;
+					}
 				}
-				free(buf);
-				fclose(f);
+
 
 				f = fopen(filePath, "r");
 				if (f == NULL) {
@@ -193,24 +202,33 @@ void https_post_task(void *pvParameters)
 				else{
 					fseek(f,0L,SEEK_END);
 					unsigned short content_length=ftell(f);
-					unsigned char *content= (unsigned char *)malloc(content_length * sizeof(unsigned char));
-					fseek(f,0L,SEEK_SET);
-					fread((char*)content,content_length,1,f);
-					ret = ir_binary_open(IR_CATEGORY_AC, 1, content, content_length);
-					int length = ir_decode(2, user_data, &ac_status, 0);
-					for (int i = 0; i < length; i++) {
-						printf("%d ", user_data[i]);
-					}
-					printf("\r\n");
-					free(content);
-					fclose(f);
+					if(content_length>0)
+					{
+						unsigned char *content= (unsigned char *)malloc(content_length * sizeof(unsigned char));
+						fseek(f,0L,SEEK_SET);
+						fread((char*)content,content_length,1,f);
+						ESP_LOGI(TAG, "content_length:%d", content_length);
+						ESP_LOGI(TAG, "content:%s", content);
+						ret = ir_binary_open(IR_CATEGORY_AC, 1, content, content_length);
+						if(ret!=-1)
+						{
+							int length = ir_decode(2, user_data, &ac_status, 0);
+							for (int i = 0; i < length; i++) {
+								printf("%d ", user_data[i]);
+							}
+							printf("\r\n");
 
-					IRsend(user_data,length);
-//					while(1)
-//					{
-//						IRsend(user_data,length);
-//						vTaskDelay(500 / portTICK_PERIOD_MS);
-//					}
+							IRsend(user_data,length);
+						}
+						free(content);
+						fclose(f);
+					}
+					else
+					{
+						fclose(f);
+						ESP_LOGI(TAG, "open irext error!!");
+						goto myerror;
+					}
 				}
 			} while(1);
         }
@@ -218,29 +236,41 @@ void https_post_task(void *pvParameters)
         {
         	fseek(f,0L,SEEK_END);
 			unsigned short content_length=ftell(f);
-			unsigned char *content= (unsigned char *)malloc(content_length * sizeof(unsigned char));
-			fseek(f,0L,SEEK_SET);
-			fread((char*)content,content_length,1,f);
-			ret = ir_binary_open(IR_CATEGORY_AC, 1, content, content_length);
-			int length = ir_decode(2, user_data, &ac_status, 0);
-			for (int i = 0; i < length; i++) {
-				printf("%d ", user_data[i]);
-			}
-			printf("\r\n");
-			fclose(f);
+			if(content_length>0)
+			{
+				unsigned char *content= (unsigned char *)malloc(content_length * sizeof(unsigned char));
+				fseek(f,0L,SEEK_SET);
+				fread((char*)content,content_length,1,f);
+				ESP_LOGI(TAG, "content_length:%d", content_length);
+				ESP_LOGI(TAG, "content:%s", content);
+				ret = ir_binary_open(IR_CATEGORY_AC, 1, content, content_length);
+				if(ret!=-1)
+				{
+					int length = ir_decode(2, user_data, &ac_status, 0);
+					for (int i = 0; i < length; i++) {
+						printf("%d ", user_data[i]);
+					}
+					printf("\r\n");
 
-			IRsend(user_data,length);
-//					while(1)
-//					{
-//						IRsend(user_data,length);
-//						vTaskDelay(500 / portTICK_PERIOD_MS);
-//					}
+					IRsend(user_data,length);
+				}
+				free(content);
+				fclose(f);
+			}
+			else
+			{
+				fclose(f);
+				ESP_LOGI(TAG, "open irext error!!");
+				goto myerror;
+			}
+
         }
 
     exit:
         esp_tls_conn_delete(tls);
+    myerror:
         putchar('\n'); // JSON output doesn't have a newline at end
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
         ESP_LOGI(TAG, "Starting again!");
     }
 }
