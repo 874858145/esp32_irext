@@ -38,7 +38,6 @@
 
 #include "IRsend.h"
 #include "smartconfig.h"
-#include "httpsdown.h"
 #include "mywifi.h"
 #include "udpsocket.h"
 #include "my_timer.h"
@@ -65,7 +64,6 @@ void app_main()
 
 	xTaskCreate(&my_timer_task, "my_timer_task", 2048, NULL, 5, &myTimerTask);
     xTaskCreate(&my_led_task, "my_led_task", 4096, NULL, 5, &ledControlTask);
-    xTaskCreate(&https_post_task, "https_post", 8192, NULL, 5, &httpDownTask);
     xTaskCreate(udp_sendip_task, "udp_sendip", 4096, NULL, 4, &udpSendIpTask);
     xTaskCreate(udp_receive_task, "udp_server", 4096, NULL, 5, &udpReceiveTask);
 }

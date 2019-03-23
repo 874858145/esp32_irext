@@ -8,6 +8,7 @@
 #ifndef MAIN_MY_TIMER_H_
 #define MAIN_MY_TIMER_H_
 #include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include "esp_types.h"

@@ -9,7 +9,7 @@
 
 static const char *TAG = "myled";
 
-const int LEDCONTROL_BIT = BIT3;
+const int LEDCONTROL_BIT = BIT2;
 
 TaskHandle_t ledControlTask;
 

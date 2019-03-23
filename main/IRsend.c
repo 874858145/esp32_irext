@@ -15,7 +15,7 @@ static inline void nec_fill_item_level(rmt_item32_t* item, unsigned short high_u
     item->level1 = 0;
     item->duration1 = (low_us) / 10 * RMT_TICK_10_US;
 
-    printf("(%d,%d,%d,%d) ",item->level0,item->duration0,item->level1,item->duration1);
+    //printf("(%d,%d,%d,%d) ",item->level0,item->duration0,item->level1,item->duration1);
 }
 
 static void u16_to_rmt(const void* src, rmt_item32_t* dest, int src_size)
@@ -73,7 +73,7 @@ void rmt_tx_int()
     config.tx_config.carrier_en = 1;
     config.tx_config.idle_output_en = true;
     config.tx_config.idle_level = 0;
-    config.tx_config.carrier_duty_percent = 50;
+    config.tx_config.carrier_duty_percent = 25;
     // set audible career frequency of 611 Hz
     // actually 611 Hz is the minimum, that can be set
     // with current implementation of the RMT API

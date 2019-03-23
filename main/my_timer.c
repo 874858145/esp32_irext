@@ -9,7 +9,7 @@
 
 static const char *TAG = "mytimer";
 
-const int MYTIMER_BIT = BIT2;
+const int MYTIMER_BIT = BIT1;
 
 TaskHandle_t myTimerTask;
 
@@ -71,10 +71,8 @@ void my_tg0_timer_stop(int timer_idx)  //暂停定时器
 
 void setTurnOnOffFlag(bool isReset)   //形参：true设置标志位为0，false设置在原来的数值加一。
 {
-	unsigned char flag=0;
-	char flagStr[4];
+	int flag=0;
 
-	memset(flagStr,0,4);
 	FILE* f = fopen("/irext/flag", "r");
 	if(f==NULL)
 	{
@@ -86,8 +84,7 @@ void setTurnOnOffFlag(bool isReset)   //形参：true设置标志位为0，false
 				flag=1;
 			else
 				flag=0;
-			itoa(flag, flagStr, 10);
-			fwrite(flagStr,strlen(flagStr),1,f);
+			fwrite(&flag,sizeof(int),1,f);
 		}
 		fclose(f);
 	}
@@ -95,25 +92,24 @@ void setTurnOnOffFlag(bool isReset)   //形参：true设置标志位为0，false
 	{
 		if (!isReset)
 		{
-			fread(flagStr,1,1,f);
+			fread(&flag,sizeof(int),1,f);
 			fclose(f);
 			f = fopen("/irext/flag", "w");
 			if(f!=NULL)
 			{
-				flag = atoi(flagStr)+1;
-				itoa(flag, flagStr, 10);
-				fwrite(flagStr,strlen(flagStr),1,f);
+				flag = flag+1;
+				fwrite(&flag,sizeof(int),1,f);
 			}
 			fclose(f);
 		}
 		else
 		{
+			fclose(f);
 			f = fopen("/irext/flag", "w");
 			if(f!=NULL)
 			{
 				flag = 0;
-				itoa(flag, flagStr, 10);
-				fwrite(flagStr,strlen(flagStr),1,f);
+				fwrite(&flag,sizeof(int),1,f);
 			}
 			fclose(f);
 		}
@@ -121,30 +117,21 @@ void setTurnOnOffFlag(bool isReset)   //形参：true设置标志位为0，false
 	ESP_LOGI(TAG, "setflag:%d",flag);
 }
 
-unsigned char getTurnOnOffFlag()
+//不要用fscanf和fprintf，贼坑
+int getTurnOnOffFlag()
 {
-	unsigned char flag=0;
-	char flagStr[4];
+	int flag=0;
 
-	memset(flagStr,0,4);
 	FILE* f = fopen("/irext/flag", "r");
 	if(f==NULL)
 	{
 		fclose(f);
-		FILE* f = fopen("/irext/flag", "w");
-		if(f!=NULL)
-		{
-			flag=0;
-			itoa(flag, flagStr, 10);
-			fwrite(flagStr,strlen(flagStr),1,f);
-		}
-		fclose(f);
+		flag = 0;
 	}
 	else
 	{
-		fread((char*)flagStr,1,1,f);
+		fread(&flag,sizeof(int),1,f);
 		fclose(f);
-		flag = atoi(flagStr);
 	}
 	ESP_LOGI(TAG, "getflag:%d",flag);
 	return flag;
@@ -153,7 +140,7 @@ unsigned char getTurnOnOffFlag()
 void my_timer_task(void *arg)
 {
 	static unsigned char statusFlag = 0;
-	unsigned char flag=0;
+	int flag=0;
 
     while (1) {
     	xEventGroupWaitBits(my_irext_event_group, MYTIMER_BIT,false, true, portMAX_DELAY);
@@ -171,7 +158,7 @@ void my_timer_task(void *arg)
 				vTaskDelete(myTimerTask);
 			}
     	}
-    	if (statusFlag > 3) {
+    	if (statusFlag > 1) {
     		esp_wifi_connect();
 			setTurnOnOffFlag(true);
 			my_tg0_timer_stop(TIMER_0);  //暂停定时器
